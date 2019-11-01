@@ -1,0 +1,16 @@
+.header {
+  padding: 80px 0;
+  background-color: #3cb3e7;
+  color: #fff;
+
+  &__content {
+    margin: 0 auto;
+    max-width: 815px;
+    text-align: center;
+
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+}
