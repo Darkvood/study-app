@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {LessonsService} from '../shared/lessons.service';
 
 @Component({
   selector: 'app-main-page',
@@ -7,9 +8,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
-  visibleList = new Array(6).fill(42);
-
-  constructor() {
+  constructor(private lessonsService: LessonsService) {
   }
 
   ngOnInit() {

@@ -15,7 +15,7 @@
   <app-lesson-filters></app-lesson-filters>
   <div class="container">
     <div class="lesson-list">
-      <app-lesson *ngFor="let lesson of visibleList"></app-lesson>
+      <app-lesson-card *ngFor="let lesson of lessonsService.lessons" [lesson]="lesson"></app-lesson-card>
     </div>
   </div>
 </main>

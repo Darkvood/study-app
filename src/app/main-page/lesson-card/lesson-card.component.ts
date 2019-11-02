@@ -1,16 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {ILesson} from '../../shared/base/BaseLesson';
 
 @Component({
-  selector: 'app-lesson',
+  selector: 'app-lesson-card',
   templateUrl: './lesson-card.component.html',
   styleUrls: ['./lesson-card.component.scss'],
 })
-export class LessonCardComponent implements OnInit {
-
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
-
+export class LessonCardComponent {
+  @Input() lesson: ILesson;
 }
