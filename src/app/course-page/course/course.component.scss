@@ -1,0 +1,19 @@
+.course {
+  display: flex;
+  border-radius: 4px;
+  box-shadow: 0 12px 11px rgba(0, 0, 0, 0.08);
+
+  &__aside {
+    padding: 20px;
+    flex: 1;
+    background-color: #eee;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__messenger {
+    flex: 1;
+  }
+}

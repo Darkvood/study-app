@@ -7,6 +7,9 @@ import {LessonFiltersComponent} from './main-page/lesson-filters/lesson-filters.
 import {LessonComponent} from './main-page/lesson/lesson.component';
 import {LessonListComponent} from './main-page/lesson-list/lesson-list.component';
 import {MainPageComponent} from './main-page/main-page.component';
+import {CoursePageComponent} from './course-page/course-page.component';
+import { CourseComponent } from './course-page/course/course.component';
+import { MessengerComponent } from './course-page/messenger/messenger.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import {MainPageComponent} from './main-page/main-page.component';
     LessonFiltersComponent,
     LessonComponent,
     LessonListComponent,
-    MainPageComponent
+    MainPageComponent,
+    CoursePageComponent,
+    CourseComponent,
+    MessengerComponent,
   ],
   imports: [
     BrowserModule,

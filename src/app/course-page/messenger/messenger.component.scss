@@ -1,0 +1,65 @@
+.messenger {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+
+  &__head {
+    padding: 20px;
+    background-color: #3cb3e7;
+    color: white;
+  }
+
+  &__message {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 8px;
+    min-width: 30%;
+    max-width: 60%;
+
+    &_from {
+      background-color: #91dcff;
+      text-align: left;
+      margin-right: auto;
+      color: #fff;
+    }
+
+    &_to {
+      background-color: #eee;
+      text-align: right;
+      margin-left: auto;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+      height: 500px;
+      padding: 0 20px 40px;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    margin-top: auto;
+  }
+
+  &__input {
+    flex: 1;
+    height: 40px;
+    padding: 8px 12px;
+    border-top: 1px solid #eee;
+  }
+
+  &__button {
+    color: #fff;
+    padding: 8px 12px;
+    background-color: #20d0c2;
+
+
+    &_help {
+      background-color: #ff5b61;
+    }
+  }
+}
