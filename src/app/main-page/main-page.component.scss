@@ -14,3 +14,13 @@
     margin-bottom: 20px;
   }
 }
+
+.lesson-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 0 40px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+

@@ -4,22 +4,20 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {LessonFiltersComponent} from './main-page/lesson-filters/lesson-filters.component';
-import {LessonComponent} from './main-page/lesson/lesson.component';
-import {LessonListComponent} from './main-page/lesson-list/lesson-list.component';
+import {LessonCardComponent} from './main-page/lesson-card/lesson-card.component';
 import {MainPageComponent} from './main-page/main-page.component';
-import {CoursePageComponent} from './course-page/course-page.component';
-import { CourseComponent } from './course-page/course/course.component';
-import { MessengerComponent } from './course-page/messenger/messenger.component';
+import {LessonPageComponent} from './lesson-page/lesson-page.component';
+import {LessonComponent} from './lesson-page/lesson/lesson.component';
+import {MessengerComponent} from './lesson-page/messenger/messenger.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LessonFiltersComponent,
-    LessonComponent,
-    LessonListComponent,
+    LessonCardComponent,
     MainPageComponent,
-    CoursePageComponent,
-    CourseComponent,
+    LessonPageComponent,
+    LessonComponent,
     MessengerComponent,
   ],
   imports: [

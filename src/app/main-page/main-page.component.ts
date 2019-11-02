@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-main-page',
@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
-  constructor() { }
+  visibleList = new Array(6).fill(42);
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

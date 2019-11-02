@@ -1,11 +1,12 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {MainPageComponent} from './main-page/main-page.component';
-import {CoursePageComponent} from './course-page/course-page.component';
+import {LessonPageComponent} from './lesson-page/lesson-page.component';
+
 
 const routes: Routes = [
   {path: '', component: MainPageComponent},
-  {path: 'course', component: CoursePageComponent}
+  {path: 'lesson', component: LessonPageComponent}
 ];
 
 @NgModule({
