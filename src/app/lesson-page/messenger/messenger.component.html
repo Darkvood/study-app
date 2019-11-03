@@ -2,15 +2,23 @@
   <div class="messenger__head">You're the best! 😎</div>
 
   <div class="messenger__message-list">
-    <div class="messenger__message messenger__message_from">Hello!</div>
-    <div class="messenger__message messenger__message_from">1+1=?</div>
-    <div class="messenger__message messenger__message_to">2</div>
-    <div class="messenger__message messenger__message_from">Nice!</div>
+    <div
+      *ngFor="let message of messages"
+      class="messenger__message a-text16"
+      [ngClass]="{ messenger__message_from: message.type === 'from', messenger__message_to: message.type === 'to' }"
+      [innerHTML]="message.message"
+      #messageList
+    ></div>
   </div>
 
-  <div class="messenger__controls">
-    <input class="messenger__input a-text16" type="text">
-    <button class="messenger__button messenger__button_help a-text16">?</button>
-    <button class="messenger__button a-text16">Отправить</button>
+  <div *ngIf="!done; else doneBlock" class="messenger__controls">
+    <input [(ngModel)]="input" class="messenger__input a-text16" type="text" (keyup.enter)="sendRequest(input)"/>
+    <button class="messenger__button messenger__button_help a-text16" (click)="sendRequest('!помощь')">?</button>
+    <button class="messenger__button a-text16" (click)="sendRequest(input)">Отправить</button>
   </div>
+  <ng-template #doneBlock>
+    <div class="messenger__controls">
+      <button class="messenger__button messenger__button_done a-text16" (click)="resolve()">Завершить!</button>
+    </div>
+  </ng-template>
 </div>

@@ -6,7 +6,7 @@ import {LessonPageComponent} from './lesson-page/lesson-page.component';
 
 const routes: Routes = [
   {path: '', component: MainPageComponent},
-  {path: 'lesson', component: LessonPageComponent}
+  {path: 'lesson/:uid', component: LessonPageComponent}
 ];
 
 @NgModule({
