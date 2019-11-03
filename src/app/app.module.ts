@@ -10,6 +10,7 @@ import {LessonPageComponent} from './lesson-page/lesson-page.component';
 import {LessonComponent} from './lesson-page/lesson/lesson.component';
 import {MessengerComponent} from './lesson-page/messenger/messenger.component';
 import {FormsModule} from '@angular/forms';
+import {LessonCardFilterPipe} from './main-page/lesson-card-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {FormsModule} from '@angular/forms';
     LessonPageComponent,
     LessonComponent,
     MessengerComponent,
+    LessonCardFilterPipe
   ],
   imports: [
     BrowserModule,

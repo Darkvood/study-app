@@ -1,4 +1,4 @@
-import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
+import {AfterViewChecked, Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import {ILesson, ISendMessage, LessonRunner} from '../../shared/base/BaseLesson';
 import {Router} from '@angular/router';
 
@@ -12,9 +12,9 @@ export interface ILessonMessage {
   templateUrl: './messenger.component.html',
   styleUrls: ['./messenger.component.scss']
 })
-export class MessengerComponent implements OnInit {
+export class MessengerComponent implements OnInit, AfterViewChecked {
   @Input() lesson: ILesson;
-  @ViewChild('messageList', {static: false}) messageList: ElementRef;
+  @ViewChild('messageList', {static: true}) messageList: ElementRef;
 
   input = '';
   done: boolean;
@@ -30,7 +30,6 @@ export class MessengerComponent implements OnInit {
     }
 
     this.sendMessage({type: 'to', message});
-
     this.input = '';
     this.done = this.lessonRunner.next(message).done;
   }
@@ -52,5 +51,9 @@ export class MessengerComponent implements OnInit {
 
     this.lessonRunner = this.lesson.run(sendMessage);
     this.lessonRunner.next();
+  }
+
+  ngAfterViewChecked() {
+    this.messageList.nativeElement.scrollTop = this.messageList.nativeElement.scrollHeight;
   }
 }

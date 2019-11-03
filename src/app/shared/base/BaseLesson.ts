@@ -41,11 +41,11 @@ export abstract class BaseLesson implements ILesson {
   }
 
   * welcome(messenger: ISendMessage) {
-    messenger.from(`Привет! Ты начал изучать урок <b>${this.title}</b>. <br />Желаем удачи!`);
+    messenger.from(`Привет!<br />Добро пожаловать в онлайн урок "<b>${this.title}</b>". <br />Желаем удачи!`);
   }
 
   * success(messenger: ISendMessage) {
-    messenger.from(`Поздравляем! Ты успешно завершил урок <b>${this.title}</b>!`);
+    messenger.from(`Поздравляем!<br /> Вы успешно завершили урок "<b>${this.title}</b>"!`);
   }
 
   // TODO: Add props to params (case sensitive and etc.)

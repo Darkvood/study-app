@@ -2,9 +2,10 @@ import {BaseLesson, ILesson, ISendMessage, LessonStage} from '../base/BaseLesson
 
 export class FruitLesson extends BaseLesson implements ILesson {
   uid = 'fruit-01';
-  title = 'Изучение фруктов';
-  shortDescription = 'В данном уроке вы выучите новые виды фруктов';
-  description = 'В данном уроке вы выучите новые виды фруктов, почему они нравятся людям и где они растут.';
+  title = 'Фрукты';
+  shortDescription = 'Из данного урока вы узнаете новые виды фруктов';
+  // tslint:disable-next-line:max-line-length
+  description = 'Из данного урока вы узнаете новые виды фруктов, чем они нравятся людям и места, где их можно встретить в естественной среде.';
 
   schema: LessonStage[] = [this.learnFruit, this.trainFruit];
 

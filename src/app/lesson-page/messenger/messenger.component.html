@@ -1,13 +1,12 @@
 <div class="messenger">
-  <div class="messenger__head">You're the best! 😎</div>
+  <div class="messenger__head">Вы восхитительны 😍</div>
 
-  <div class="messenger__message-list">
+  <div class="messenger__message-list" #messageList>
     <div
       *ngFor="let message of messages"
       class="messenger__message a-text16"
       [ngClass]="{ messenger__message_from: message.type === 'from', messenger__message_to: message.type === 'to' }"
       [innerHTML]="message.message"
-      #messageList
     ></div>
   </div>
 
