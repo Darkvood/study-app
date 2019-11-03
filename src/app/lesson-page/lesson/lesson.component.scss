@@ -4,15 +4,25 @@
   display: flex;
   border-radius: 4px;
   box-shadow: 0 12px 11px rgba(0, 0, 0, 0.08);
+  height: 600px;
 
   @media (max-width: $tablet) {
+    height: auto;
     flex-direction: column;
+    box-shadow: none;
   }
 
   &__aside {
     padding: 20px;
     flex: 1;
     background-color: #eee;
+    overflow-y: scroll;
+    height: 100%;
+
+    @media (max-width: $tablet) {
+      max-height: 60vh;
+      box-shadow: 0 12px 11px rgba(0, 0, 0, 0.08);
+    }
   }
 
   &__title {
@@ -21,6 +31,11 @@
 
   &__messenger {
     flex: 1;
+
+    @media (max-width: $tablet) {
+      margin-top: 20px;
+      box-shadow: 0 12px 11px rgba(0, 0, 0, 0.08);
+    }
   }
 
   &__back-url {

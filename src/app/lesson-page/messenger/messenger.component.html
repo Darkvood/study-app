@@ -11,7 +11,8 @@
   </div>
 
   <div *ngIf="!done; else doneBlock" class="messenger__controls">
-    <input [(ngModel)]="input" class="messenger__input a-text16" type="text" (keyup.enter)="sendRequest(input)"/>
+    <input [(ngModel)]="input" class="messenger__input a-text16" type="text" placeholder="Напишите сообщение..."
+           (keyup.enter)="sendRequest(input)"/>
     <button class="messenger__button messenger__button_help a-text16" (click)="sendRequest('!помощь')">?</button>
     <button class="messenger__button a-text16" (click)="sendRequest(input)">Отправить</button>
   </div>

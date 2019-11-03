@@ -33,7 +33,7 @@ export abstract class BaseLesson implements ILesson {
   abstract shortDescription: string;
   abstract description: string;
   abstract schema: LessonStage[];
-  img = '';
+  img = 'lesson-bg_default';
   done: boolean;
   maxTryCount = 5;
 

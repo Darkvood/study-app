@@ -12,7 +12,7 @@ export class LessonCardFilterPipe implements PipeTransform {
     }
 
     return value.filter(lesson => {
-      return `${lesson.title}__${lesson.shortDescription}`.includes(search);
+      return `${lesson.title}__${lesson.shortDescription}`.toLowerCase().includes(search.toLowerCase());
     });
   }
 

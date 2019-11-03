@@ -1,4 +1,4 @@
-import {BaseLesson, ILesson, ISendMessage, LessonStage} from '../base/BaseLesson';
+import {BaseLesson, ILesson, ILessonQuestion, ISendMessage, LessonStage} from '../base/BaseLesson';
 
 export class FruitLesson extends BaseLesson implements ILesson {
   uid = 'fruit-01';
@@ -21,29 +21,30 @@ export class FruitLesson extends BaseLesson implements ILesson {
   }
 
   * trainFruit(messenger: ISendMessage) {
-    yield* this.waitAnswer({
-      question: 'Что это за фрукт - 🍏?',
-      answer: 'Яблоко',
-      onDone: `
-        Верно! Яблоко - сочный кислосладкий плод яблони, который употребляется в пищу в свежем виде, служит сырьём в кулинарии
-        и для приготовления напитков
-      `
-    })(messenger);
+    const questionList: ILessonQuestion[] = [
+      {
+        question: 'Что это за фрукт - 🍏?',
+        answer: 'Яблоко',
+        // tslint:disable-next-line:max-line-length
+        onDone: 'Верно! Яблоко - сочный кислосладкий плод яблони, который употребляется в пищу в свежем виде, служит сырьём в кулинарии и для приготовления напитков'
+      },
+      {
+        question: 'Что это за фрукт - 🍋?',
+        answer: 'Лимон',
+        onDone: 'Верно.. и очень кисло :):'
+      },
+      {
+        question: 'Что это за фрукт - 🍌?',
+        answer: 'Банан'
+      },
+      {
+        question: 'Что это за фрукт - 🍊?',
+        answer: 'Апельсин'
+      }
+    ];
 
-    yield* this.waitAnswer({
-      question: 'Что это за фрукт - 🍋?',
-      answer: 'Лимон',
-      onDone: 'Верно.. и очень кисло :):'
-    })(messenger);
-
-    yield* this.waitAnswer({
-      question: 'Что это за фрукт - 🍌?',
-      answer: 'Банан'
-    })(messenger);
-
-    yield* this.waitAnswer({
-      question: 'Что это за фрукт - 🍊?',
-      answer: 'Апельсин'
-    })(messenger);
+    for (const question of questionList) {
+      yield* this.waitAnswer(question)(messenger);
+    }
   }
 }

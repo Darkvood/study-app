@@ -1,7 +1,7 @@
 <div class="lesson">
   <a [routerLink]="['/lesson', lesson.uid]">
     <div class="lesson__img">
-      <img src="assets/img/lesson-bg_default.svg" alt="">
+      <img [src]="'assets/img/'+ lesson.img +'.svg'" alt="">
     </div>
     <div class="a-text24">{{ lesson.title }}</div>
     <div class="a-text16">{{ lesson.shortDescription }}</div>

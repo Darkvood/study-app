@@ -6,6 +6,7 @@ import {ILesson} from './base/BaseLesson';
   providedIn: 'root'
 })
 export class LessonsService {
+  search = '';
   lessons: ILesson[] = [];
 
   constructor() {
