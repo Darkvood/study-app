@@ -1,7 +1,13 @@
+@import 'src/variables';
+
 .lesson {
   display: flex;
   border-radius: 4px;
   box-shadow: 0 12px 11px rgba(0, 0, 0, 0.08);
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+  }
 
   &__aside {
     padding: 20px;
@@ -15,5 +21,9 @@
 
   &__messenger {
     flex: 1;
+  }
+
+  &__back-url {
+    margin-bottom: 20px;
   }
 }
