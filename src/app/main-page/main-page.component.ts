@@ -7,6 +7,6 @@ import {LessonsService} from '../shared/lessons.service';
   styleUrls: ['./main-page.component.scss'],
 })
 export class MainPageComponent {
-  constructor(private lessonsService: LessonsService) {
+  constructor(public lessonsService: LessonsService) {
   }
 }
