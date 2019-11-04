@@ -1,9 +1,10 @@
-<div class="lesson">
+<div class="lesson-card">
   <a [routerLink]="['/lesson', lesson.uid]">
-    <div class="lesson__img">
+    <div class="lesson-card__img">
       <img [src]="'assets/img/'+ lesson.img +'.svg'" alt="">
     </div>
     <div class="a-text24">{{ lesson.title }}</div>
     <div class="a-text16">{{ lesson.shortDescription }}</div>
   </a>
 </div>
+

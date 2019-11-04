@@ -1,6 +1,6 @@
 # Study app
 
-Интерактивная учебная платфома, основанная на диалогах.
+interactive learning platform based on dialogues.
 
 ## Development
 

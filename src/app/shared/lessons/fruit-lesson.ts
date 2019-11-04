@@ -7,9 +7,9 @@ export class FruitLesson extends BaseLesson implements ILesson {
   // tslint:disable-next-line:max-line-length
   description = 'Из данного урока вы узнаете новые виды фруктов, чем они нравятся людям и места, где их можно встретить в естественной среде.';
 
-  schema: LessonStage[] = [this.learnFruit, this.trainFruit];
+  schema: LessonStage[] = [this.learn, this.practice];
 
-  * learnFruit(messenger: ISendMessage) {
+  * learn(messenger: ISendMessage) {
     messenger.from(`
     <p>Рассмотрим 4 вида фруктов: </p>
     <ul>
@@ -20,7 +20,7 @@ export class FruitLesson extends BaseLesson implements ILesson {
      </ul>`);
   }
 
-  * trainFruit(messenger: ISendMessage) {
+  * practice(messenger: ISendMessage) {
     const questionList: ILessonQuestion[] = [
       {
         question: 'Что это за фрукт - 🍏?',
