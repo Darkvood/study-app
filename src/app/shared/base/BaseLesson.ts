@@ -1,11 +1,11 @@
 export interface ISendMessage {
   to: (message: string) => void;
   from: (message: string) => void;
-};
+}
 
 export interface ILessonQuestion {
   question: string;
-  answer: string;
+  answer: string | string[];
   onDone?: string;
   onError?: string;
 }
@@ -48,13 +48,8 @@ export abstract class BaseLesson implements ILesson {
     messenger.from(`Поздравляем!<br /> Вы успешно завершили урок "<b>${this.title}</b>"!`);
   }
 
-  // TODO: Add props to params (case sensitive and etc.)
   waitAnswer(question: ILessonQuestion, params?: {}): LessonStage {
     const maxTryCount = this.maxTryCount;
-
-    const formatAnswer = (text: string) => text.trim().toLocaleLowerCase();
-    const formatError = this.formatError;
-    const getHelp = this.getHelp;
 
     const stage = function* (messenger: ISendMessage) {
       messenger.from(question.question);
@@ -63,19 +58,27 @@ export abstract class BaseLesson implements ILesson {
         const answer = yield;
 
         if (answer === '!помощь') {
-          messenger.from(getHelp(question.answer, tryNo, maxTryCount));
-          tryNo--;
-          continue;
-        } else if (formatAnswer(question.answer) === formatAnswer(answer)) {
+          messenger.from(this.getHelp(question.answer, tryNo--, maxTryCount));
+        } else if (this.validateAnswer(question.answer, answer, params)) {
           messenger.from(question.onDone || 'Отлично!');
           return;
+        } else {
+          messenger.from(this.formatError(question.onError, tryNo, maxTryCount));
         }
-
-        messenger.from(formatError(question.onError, tryNo, maxTryCount));
       }
     };
 
-    return stage;
+    return stage.bind(this);
+  }
+
+  // TODO: Add props to params (case sensitive and etc.)
+  private validateAnswer(currentAnswer: string | string[], actualAnswer: string, params: {}) {
+    const reducer = (text: string) => text.trim().toLocaleLowerCase();
+    actualAnswer = reducer(actualAnswer);
+
+    return typeof currentAnswer !== 'string'
+      ? currentAnswer.find(answer => reducer(answer) === actualAnswer)
+      : currentAnswer === actualAnswer;
   }
 
   private formatError(onError, tryNo, maxTryCount) {
@@ -91,8 +94,13 @@ export abstract class BaseLesson implements ILesson {
     return errorText;
   }
 
-  private getHelp(answer, tryNo, maxTryCount) {
-    const countVisibleChar = Math.ceil(answer.length * tryNo / maxTryCount);
+  private getHelp(answer: string | string[], tryNo, maxTryCount) {
+    // take first answer from array
+    if (typeof answer !== 'string') {
+      answer = answer[0];
+    }
+
+    const countVisibleChar = Math.ceil((answer.length * tryNo) / maxTryCount);
 
     return answer.slice(0, countVisibleChar) + '*'.repeat(answer.length - countVisibleChar);
   }

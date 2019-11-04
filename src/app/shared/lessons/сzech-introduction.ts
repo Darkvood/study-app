@@ -48,7 +48,7 @@ export class СzechIntroduction extends BaseLesson implements ILesson {
       },
       {
         question: 'Сколько типов диакритических знаков используется?',
-        answer: 'три'
+        answer: ['три', '3']
       },
       {
         question: 'На что указывает диакритические знак čárka?',
@@ -56,7 +56,7 @@ export class СzechIntroduction extends BaseLesson implements ILesson {
       },
       {
         question: 'Можно ли опустить глагол-связку "быть" в предложении?',
-        answer: 'нельзя'
+        answer: ['нельзя', 'нет']
       }
     ];
 
