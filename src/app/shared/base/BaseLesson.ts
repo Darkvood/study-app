@@ -73,12 +73,12 @@ export abstract class BaseLesson implements ILesson {
 
   // TODO: Add props to params (case sensitive and etc.)
   private validateAnswer(currentAnswer: string | string[], actualAnswer: string, params: {}) {
-    const reducer = (text: string) => text.trim().toLocaleLowerCase();
+    const reducer = (text: string) => text.trim().toLowerCase();
     actualAnswer = reducer(actualAnswer);
 
     return typeof currentAnswer !== 'string'
       ? currentAnswer.find(answer => reducer(answer) === actualAnswer)
-      : currentAnswer === actualAnswer;
+      : reducer(currentAnswer) === actualAnswer;
   }
 
   private formatError(onError, tryNo, maxTryCount) {
