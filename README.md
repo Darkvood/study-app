@@ -1,6 +1,6 @@
 # Study app
 
-interactive learning platform based on dialogues.
+Интерактивная учебная платформа, основанная на диалогах.
 
 ## Development
 
@@ -9,7 +9,7 @@ $ npm i
 $ npm start
 ```
 
-Navigate to `http://localhost:4200/`
+Перейти по адресу `http://localhost:4200/`
 
 ## Build
 

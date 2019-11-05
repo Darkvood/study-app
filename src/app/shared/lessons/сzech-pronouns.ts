@@ -84,11 +84,11 @@ export class СzechPronouns extends BaseLesson implements ILesson {
       },
       {
         question: 'Выполните перевод: Кто?',
-        answer: 'Kdo?'
+        answer: ['kdo?', 'kdo']
       },
       {
         question: 'Выполните перевод: Co?',
-        answer: 'Что?'
+        answer: ['что?', 'что']
       }
     ];
 
