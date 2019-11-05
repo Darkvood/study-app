@@ -33,35 +33,27 @@ export class СzechIntroduction extends BaseLesson implements ILesson {
      что его употребление обязательно!</p>
    `;
 
-  schema: LessonStage[] = [this.practice];
-
-  * practice(messenger: ISendMessage) {
-    const questionList: ILessonQuestion[] = [
-      {
-        question: 'Ознакомтесь с теоретическим материалом и напишите "готов"',
-        answer: 'готов',
-        onError: 'Напишите "готов", если вы ознакомились с теоретическим материалом'
-      },
-      {
-        question: 'Какой алфавит используется в чешском языке?',
-        answer: 'латинский'
-      },
-      {
-        question: 'Сколько типов диакритических знаков используется?',
-        answer: ['три', '3']
-      },
-      {
-        question: 'На что указывает диакритические знак čárka?',
-        answer: 'длину'
-      },
-      {
-        question: 'Можно ли опустить глагол-связку "быть" в предложении?',
-        answer: ['нельзя', 'нет']
-      }
-    ];
-
-    for (const question of questionList) {
-      yield* this.waitAnswer(question)(messenger);
+  questions: ILessonQuestion[] = [
+    {
+      question: 'Ознакомтесь с теоретическим материалом и напишите "готов"',
+      answer: 'готов',
+      onError: 'Напишите "готов", если вы ознакомились с теоретическим материалом'
+    },
+    {
+      question: 'Какой алфавит используется в чешском языке?',
+      answer: 'латинский'
+    },
+    {
+      question: 'Сколько типов диакритических знаков используется?',
+      answer: ['три', '3']
+    },
+    {
+      question: 'На что указывает диакритические знак čárka?',
+      answer: 'длину'
+    },
+    {
+      question: 'Можно ли опустить глагол-связку "быть" в предложении?',
+      answer: ['нельзя', 'нет']
     }
-  }
+  ];
 }

@@ -1,5 +1,5 @@
 import {AfterViewChecked, Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
-import {ILesson, ISendMessage, LessonRunner} from '../../shared/base/BaseLesson';
+import {ILesson, ISendMessage, ProcessLesson} from '../../shared/base/BaseLesson';
 import {Router} from '@angular/router';
 
 export interface ILessonMessage {
@@ -19,7 +19,7 @@ export class MessengerComponent implements OnInit, AfterViewChecked {
   input = '';
   done: boolean;
   messages: ILessonMessage[] = [];
-  lessonRunner: LessonRunner;
+  lessonRunner: ProcessLesson;
 
   constructor(private router: Router) {
   }
