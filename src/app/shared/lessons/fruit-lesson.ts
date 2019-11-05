@@ -1,4 +1,4 @@
-import {BaseLesson, ILesson, ILessonQuestion, ISendMessage, LessonStage} from '../base/BaseLesson';
+import {BaseLesson, ILesson, ILessonQuestion} from '../base/BaseLesson';
 
 export class FruitLesson extends BaseLesson implements ILesson {
   uid = 'fruit-01';
@@ -12,7 +12,7 @@ export class FruitLesson extends BaseLesson implements ILesson {
        <li>Лимон 🍋</li>
        <li>Банан 🍌</li>
        <li>Апельсин 🍊</li>
-     </ul>`;
+</ul>`;
 
   questions: ILessonQuestion[] = [
     {

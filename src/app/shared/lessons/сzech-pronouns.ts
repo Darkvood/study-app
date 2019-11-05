@@ -1,4 +1,4 @@
-import {BaseLesson, ILesson, ILessonQuestion, ISendMessage, LessonStage} from '../base/BaseLesson';
+import {BaseLesson, ILesson, ILessonQuestion} from '../base/BaseLesson';
 
 export class СzechPronouns extends BaseLesson implements ILesson {
   uid = 'czech-pronouns';
