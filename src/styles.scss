@@ -82,11 +82,12 @@ body {
   cursor: pointer;
   padding: 8px 12px;
   border-radius: 4px;
-  background-color: #91dcff;
+  background-color: #188cbf;
   color: white;
   box-shadow: 0 12px 11px rgba(0, 0, 0, 0.08);
 
-  &_bold {
-    background-color: #188cbf;
+  &_light {
+    background-color: #91dcff;
+
   }
 }
