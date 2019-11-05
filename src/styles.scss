@@ -76,3 +76,17 @@ body {
     }
   }
 }
+
+.a-button {
+  display: inline-block;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background-color: #91dcff;
+  color: white;
+  box-shadow: 0 12px 11px rgba(0, 0, 0, 0.08);
+
+  &_bold {
+    background-color: #188cbf;
+  }
+}

@@ -1,0 +1,19 @@
+.about-page {
+  padding: 80px 0;
+  background-color: #eee;
+  height: 100vh;
+
+  &__text {
+    margin-top: 15px;
+  }
+
+  &__content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__back-url {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+}
