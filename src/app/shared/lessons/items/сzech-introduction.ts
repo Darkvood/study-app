@@ -1,4 +1,4 @@
-import {BaseLesson, ILesson, ILessonQuestion} from '../base/BaseLesson';
+import {BaseLesson, ILesson, ILessonQuestion} from '../base/base-lesson';
 
 export class СzechIntroduction extends BaseLesson implements ILesson {
   uid = 'czech-introduction';

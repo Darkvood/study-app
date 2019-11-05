@@ -1,4 +1,4 @@
-import {BaseLessonRunner} from './BaseLessonRunner';
+import {LessonRunner} from '../lesson-runner';
 
 export interface ISendMessage {
   to: (message: string) => void;
@@ -57,7 +57,7 @@ export abstract class BaseLesson implements ILesson {
   }
 
   * run(messenger: ISendMessage): ProcessLesson {
-    const task = new BaseLessonRunner(this, messenger);
+    const task = new LessonRunner(this, messenger);
 
     yield* task.run();
   }

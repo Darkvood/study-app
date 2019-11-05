@@ -11,6 +11,7 @@ import {LessonComponent} from './lesson-page/lesson/lesson.component';
 import {MessengerComponent} from './lesson-page/messenger/messenger.component';
 import {FormsModule} from '@angular/forms';
 import {LessonCardFilterPipe} from './main-page/lesson-card-filter.pipe';
+import {AboutPageComponent} from './about-page/about-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {LessonCardFilterPipe} from './main-page/lesson-card-filter.pipe';
     LessonPageComponent,
     LessonComponent,
     MessengerComponent,
-    LessonCardFilterPipe
+    LessonCardFilterPipe,
+    AboutPageComponent
   ],
   imports: [
     BrowserModule,

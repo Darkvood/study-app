@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import * as LessonList from './lessons/lesson-registry';
-import {ILesson} from './base/BaseLesson';
+import {ILesson} from './lessons/base/base-lesson';
 
 @Injectable({
   providedIn: 'root'

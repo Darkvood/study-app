@@ -1,6 +1,6 @@
-import {ILesson, ILessonQuestion, ISendMessage, LessonStage} from './BaseLesson';
+import {ILesson, ILessonQuestion, ISendMessage, LessonStage} from './base/base-lesson';
 
-export class BaseLessonRunner {
+export class LessonRunner {
   maxTryCount = 5;
 
   constructor(private lesson: ILesson, private messenger: ISendMessage) {

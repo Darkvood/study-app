@@ -1,3 +1,3 @@
-export {СzechIntroduction} from './сzech-introduction';
-export {СzechPronouns} from './сzech-pronouns';
-export {FruitLesson} from './fruit-lesson';
+export {СzechIntroduction} from './items/сzech-introduction';
+export {СzechPronouns} from './items/сzech-pronouns';
+export {FruitLesson} from './items/fruit-lesson';

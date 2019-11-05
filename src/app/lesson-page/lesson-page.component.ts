@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
 import {LessonsService} from '../shared/lessons.service';
-import {ILesson} from '../shared/base/BaseLesson';
+import {ILesson} from '../shared/lessons/base/base-lesson';
 
 @Component({
   selector: 'app-lesson-page',

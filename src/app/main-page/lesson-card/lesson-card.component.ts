@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {ILesson} from '../../shared/base/BaseLesson';
+import {ILesson} from '../../shared/lessons/base/base-lesson';
 
 @Component({
   selector: 'app-lesson-card',

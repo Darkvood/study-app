@@ -1,5 +1,5 @@
 import {AfterViewChecked, Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
-import {ILesson, ISendMessage, ProcessLesson} from '../../shared/base/BaseLesson';
+import {ILesson, ISendMessage, ProcessLesson} from '../../shared/lessons/base/base-lesson';
 import {Router} from '@angular/router';
 
 export interface ILessonMessage {

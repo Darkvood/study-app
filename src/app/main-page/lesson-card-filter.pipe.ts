@@ -1,5 +1,5 @@
 import {Pipe, PipeTransform} from '@angular/core';
-import {ILesson} from '../shared/base/BaseLesson';
+import {ILesson} from '../shared/lessons/base/base-lesson';
 
 @Pipe({
   name: 'lessonCardFilter'
