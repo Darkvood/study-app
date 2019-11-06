@@ -7,14 +7,22 @@ import {ILesson} from './lessons/base/base-lesson';
 })
 export class LessonsService {
   search = '';
+  category = 'all';
   lessons: ILesson[] = [];
+  lessonCategories: string[] = [];
 
   constructor() {
+    const categories: string[] = [];
+
     // tslint:disable-next-line:forin
     for (const name in LessonList) {
-      // tslint:disable-next-line:new-parens
-      this.lessons.push(new LessonList[name]());
+      const lesson: ILesson = new LessonList[name]();
+
+      categories.push(...lesson.categories);
+      this.lessons.push(lesson);
     }
+
+    this.lessonCategories = [...new Set(categories)];
   }
 
   getByUid(uid: string): ILesson | false {

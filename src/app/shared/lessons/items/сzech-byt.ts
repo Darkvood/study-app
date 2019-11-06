@@ -5,6 +5,7 @@ export class СzechByt extends BaseLesson implements ILesson {
   title = 'Чешский язык. Глагол «Быть» (být)';
   img = 'flag_czech';
   shortDescription = 'Употребление глагола-связки «Быть»';
+  categories = ['Чешский язык'];
   description = `
     <p>
       Предложение в чешском языке не может быть без глагола. Глагол — это изменяемая часть речи,

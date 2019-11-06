@@ -3,16 +3,13 @@
     <div class="lesson-filters__content">
       <label class="lesson-filters__input-wrap a-text16">
         Поиск
-        <input class="lesson-filters__input" type="text" [(ngModel)]="lessonsService.search">
+        <input class="lesson-filters__input" type="text" [(ngModel)]="lessonsService.search"/>
       </label>
 
-      <select class="lesson-filters__select a-text16" disabled>
-        <option value="0">Показывать все</option>
-        <option value="1">Только не завершенные</option>
-        <option value="2">Только завершенные</option>
+      <select class="lesson-filters__select a-text16" [(ngModel)]="lessonsService.category">
+        <option selected="selected" value="all">Все категории</option>
+        <option *ngFor="let category of lessonsService.lessonCategories" [value]="category">{{ category }}</option>
       </select>
     </div>
   </div>
 </div>
-
-

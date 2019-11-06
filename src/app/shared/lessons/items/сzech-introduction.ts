@@ -5,6 +5,7 @@ export class СzechIntroduction extends BaseLesson implements ILesson {
   title = 'Чешский язык. Введение';
   img = 'flag_czech';
   shortDescription = 'Общая информация, особенности и основные отличия от русского языка';
+  categories = ['Чешский язык'];
   description = `
      <p>
        Чешский и русский языки являются родственными, оба являются славянскими языками, однако чешский язык относится к западнославянской

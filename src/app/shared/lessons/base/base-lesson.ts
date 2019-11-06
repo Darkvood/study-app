@@ -21,6 +21,7 @@ export interface ILesson {
   shortDescription: string;
   description: string;
   img: string;
+  categories: string[];
   done: boolean;
 
   questions: ILessonQuestion[];
@@ -37,6 +38,7 @@ export abstract class BaseLesson implements ILesson {
   abstract questions: ILessonQuestion[];
 
   img = 'lesson-bg_default';
+  categories = [];
   done: boolean;
 
   constructor(public isDone = false) {

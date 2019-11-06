@@ -5,6 +5,7 @@ export class СzechPronouns extends BaseLesson implements ILesson {
   title = 'Чешский язык. Местоимения';
   img = 'flag_czech';
   shortDescription = 'Местоимения в чешском языке';
+  categories = ['Чешский язык'];
   description = `
     <p>Чешские местоимения идентичны русским, разница заключается лишь в том, что записывают их латиницей.</p>
     <p>Например: <i>ty</i> - ты; <i>on</i> - он.</p>

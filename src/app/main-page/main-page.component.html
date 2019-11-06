@@ -17,8 +17,9 @@
   <app-lesson-filters></app-lesson-filters>
   <div class="container">
     <div class="lesson-list">
-      <app-lesson-card *ngFor="let lesson of lessonsService.lessons | lessonCardFilter: lessonsService.search "
-                       [lesson]="lesson"></app-lesson-card>
+      <app-lesson-card
+        *ngFor="let lesson of lessonsService.lessons | lessonCardFilter: lessonsService.search : lessonsService.category "
+        [lesson]="lesson"></app-lesson-card>
     </div>
   </div>
 </main>

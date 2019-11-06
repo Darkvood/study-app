@@ -5,6 +5,7 @@ export class FishSturgeon extends BaseLesson implements ILesson {
   title = 'Осетровые рыбы';
   img = 'fish';
   shortDescription = 'Виды, значение и образ жизни Осетровых';
+  categories = ['Ихтиология'];
   description = `
       <p>Основные виды осетровых:</p>
       <ul>

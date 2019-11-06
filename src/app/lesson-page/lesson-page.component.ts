@@ -23,8 +23,6 @@ export class LessonPageComponent implements OnInit {
       } else {
         // TODO: Redirect to 404
       }
-
     });
   }
-
 }

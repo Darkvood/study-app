@@ -5,8 +5,16 @@ import {ILesson} from '../shared/lessons/base/base-lesson';
   name: 'lessonCardFilter'
 })
 export class LessonCardFilterPipe implements PipeTransform {
+  transform(value: ILesson[], search: string, category: string): ILesson[] {
+    if (category === 'all') {
+      category = null;
+    }
 
-  transform(value: ILesson[], search: string): ILesson[] {
+    value = value.filter(lesson => {
+      return category ? lesson.categories.indexOf(category) !== -1 : true;
+    });
+
+
     if (!search.trim()) {
       return value;
     }

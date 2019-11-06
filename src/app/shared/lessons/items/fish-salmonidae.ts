@@ -5,6 +5,7 @@ export class FishSalmonidae extends BaseLesson implements ILesson {
   title = 'Лососевые рыбы';
   img = 'fish';
   shortDescription = 'Основные представители, краткое описание видов и промысловое значение лососевых.';
+  categories = ['Ихтиология'];
   description = `
       <p>Основные виды лососевых:</p>
       <p>
