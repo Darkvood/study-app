@@ -77,17 +77,36 @@ body {
   }
 }
 
+// elements
 .a-button {
   display: inline-block;
   cursor: pointer;
   padding: 8px 12px;
+  font-size: 16px;
+  line-height: 24px;
   border-radius: 4px;
   background-color: #188cbf;
   color: white;
   box-shadow: 0 12px 11px rgba(0, 0, 0, 0.08);
 
+  &:hover, &focus {
+    background-color: #157ba8;
+  }
+
   &_light {
     background-color: #91dcff;
+  }
+}
 
+.a-link {
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  border-bottom: 1px dashed #d2d2d2;
+
+  &:hover,
+  &:focus {
+    color: #188cbf;
+    border-color: #188cbf;
   }
 }

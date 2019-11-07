@@ -2,6 +2,7 @@
 
 .lesson {
   display: flex;
+  margin-top: 20px;
   border-radius: 4px;
   box-shadow: 0 12px 11px rgba(0, 0, 0, 0.08);
   height: 600px;
@@ -36,9 +37,5 @@
       margin-top: 20px;
       box-shadow: 0 12px 11px rgba(0, 0, 0, 0.08);
     }
-  }
-
-  &__back-url {
-    margin-bottom: 20px;
   }
 }

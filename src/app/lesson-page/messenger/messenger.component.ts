@@ -29,6 +29,8 @@ export class MessengerComponent implements OnInit, AfterViewChecked {
       return;
     }
 
+    message = message.replace(/<[^>]*>/g, '');
+
     this.sendMessage({type: 'to', message});
     this.input = '';
     this.done = this.lessonRunner.next(message).done;

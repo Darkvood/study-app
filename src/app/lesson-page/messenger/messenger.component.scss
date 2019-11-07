@@ -76,12 +76,20 @@
     padding: 8px 12px;
     background-color: #20d0c2;
 
+    &:hover, &focus {
+      background-color: #1dbaad;
+    }
+
     @media (max-width: $tablet) {
       flex: 3;
     }
 
     &_help {
       background-color: #ff5b61;
+
+      &:hover, &focus {
+        background-color: #ff4248;
+      }
 
       @media (max-width: $tablet) {
         flex: 1;
