@@ -1,5 +1,5 @@
 <div class="lesson-page">
   <div class="container">
-    <app-lesson [lesson]="lesson"></app-lesson>
+    <app-lesson *ngIf="lesson" [lesson]="lesson"></app-lesson>
   </div>
 </div>

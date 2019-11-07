@@ -1,0 +1,22 @@
+.page-404 {
+  padding: 80px 0;
+  background-color: #eee;
+  height: 100vh;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  &__control {
+    &:first-child {
+      margin-right: 15px;
+    }
+  }
+}

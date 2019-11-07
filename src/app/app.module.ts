@@ -12,6 +12,7 @@ import {MessengerComponent} from './lesson-page/messenger/messenger.component';
 import {FormsModule} from '@angular/forms';
 import {LessonCardFilterPipe} from './main-page/lesson-card-filter.pipe';
 import {AboutPageComponent} from './about-page/about-page.component';
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {AboutPageComponent} from './about-page/about-page.component';
     LessonComponent,
     MessengerComponent,
     LessonCardFilterPipe,
-    AboutPageComponent
+    AboutPageComponent,
+    NotFoundPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Params} from '@angular/router';
+import {ActivatedRoute, Params, Router} from '@angular/router';
 import {LessonsService} from '../shared/lessons.service';
 import {ILesson} from '../shared/lessons/base/base-lesson';
 
@@ -11,7 +11,7 @@ import {ILesson} from '../shared/lessons/base/base-lesson';
 export class LessonPageComponent implements OnInit {
   lesson: ILesson;
 
-  constructor(private route: ActivatedRoute, private lessonsService: LessonsService) {
+  constructor(private route: ActivatedRoute, private router: Router, private lessonsService: LessonsService) {
   }
 
   ngOnInit() {
@@ -21,7 +21,7 @@ export class LessonPageComponent implements OnInit {
       if (lesson) {
         this.lesson = lesson;
       } else {
-        // TODO: Redirect to 404
+        this.router.navigate(['not-found']);
       }
     });
   }
