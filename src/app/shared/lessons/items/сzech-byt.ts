@@ -15,6 +15,7 @@ export class СzechByt extends BaseLesson implements ILesson {
     <ul>
       <li><b>Čech</b> — чех</li>
       <li><b>Rus</b> — русский</li>
+      <li><b>děti</b> — дети</li>
       <li><b>venku</b> — на улице (вне помещения)</li>
       <li><b>dům</b> — дом (<b>doma</b> — в доме, дома) </li>
       <li><b>škola</b> — школа</li>
@@ -42,16 +43,16 @@ export class СzechByt extends BaseLesson implements ILesson {
     <h3>Отрицательная форма</h3>
     <p>Отрицательная форма глагола образуется добавлением приставки <b>ne</b>. Исключением является третья форма единственного числа.</p>
     <ul>
-      <li>Já <b>nejsem</b> doma — я дома.</li>
-      <li>Ty <b>nejsi</b> doma — ты дома.</li>
-      <li>On, ona, ono <b>není</b> doma — он, она, оно дома. <i>Исключение!</i></li>
-      <li>My <b>nejsme</b> doma — мы дома.</li>
-      <li>Vy <b>nejste</b> doma — вы дома.</li>
-      <li>Oni <b>nejsou</b> doma — они дома.</li>
+      <li>Já <b>nejsem</b> doma — я не дома.</li>
+      <li>Ty <b>nejsi</b> doma — ты не дома.</li>
+      <li>On, ona, ono <b>není</b> doma — он, она, оно не дома. <i>Исключение!</i></li>
+      <li>My <b>nejsme</b> doma — мы не дома.</li>
+      <li>Vy <b>nejste</b> doma — вы не дома.</li>
+      <li>Oni <b>nejsou</b> doma — они не дома.</li>
     </ul>
     <h3>Вопросительная форма</h3>
     <p>
-      Вопрос выделяется интонацией, а в конце предложения ставится вопросительный знак, так же как и в русском языке. 
+      Вопрос выделяется интонацией, а в конце предложения ставится вопросительный знак, так же как и в русском языке.
       Если в тексте присутствует вопросительное местоимение, то оно ставится на первое место.
     </p>
     <ul>
@@ -92,14 +93,105 @@ export class СzechByt extends BaseLesson implements ILesson {
 
   questions: ILessonQuestion[] = [
     {
-      question: 'Урок находится в разработке. Напишите "выйти", чтобы завершить',
-      answer: 'выйти',
-      onError: 'Напишите "выйти"'
+      question: 'Ознакомтесь с теоретическим материалом и напишите "готов"',
+      answer: 'готов',
+      onError: 'Напишите "готов", если вы ознакомились с теоретическим материалом'
+    },
+    {
+      question: 'Переведите: Я дома',
+      answer: ['Já jsem doma', 'Jsem doma']
+    },
+    {
+      question: 'Задайте вопрос: Ты дома?',
+      answer: ['Ty jsi doma?', 'Jsi doma?']
+    },
+    {
+      question: 'Переведите: Я не дома',
+      answer: ['Já nejsem doma', 'Nejsem doma']
+    },
+    {
+      question: 'Переведите: Я русский',
+      answer: ['Já jsem Rus', 'Jsem Rus']
+    },
+    {
+      question: 'Задайте вопрос: Ты русский?',
+      answer: ['Ty jsi Rus?', 'Jsi Rus?']
+    },
+    {
+      question: 'Переведите: Я не русский',
+      answer: ['Já nejsem Rus', 'Nejsem Rus']
+    },
+    {
+      question: 'Переведите: Дети на улице',
+      answer: 'Děti jsou venku'
+    },
+    {
+      question: 'Задайте вопрос: Дети на улице?',
+      answer: 'Děti jsou venku?'
+    },
+    {
+      question: 'Переведите: Дети не на улице',
+      answer: 'Děti nejsou venku'
+    },
+    {
+      question: 'Переведите: Мы в школе',
+      answer: 'My jsme ve škole'
+    },
+    {
+      question: 'Задайте вопрос: Они в школе?',
+      answer: 'Oni jsou ve škole?'
+    },
+    {
+      question: 'Переведите: Мы не в школе',
+      answer: 'My nejsme ve škole'
+    },
+    {
+      question: 'Переведите: Он студент',
+      answer: 'On je student'
+    },
+    {
+      question: 'Задайте вопрос: Вы студент?',
+      answer: 'Vy jste student?'
+    },
+    {
+      question: 'Переведите: Он не студент',
+      answer: 'On není student'
+    },
+    {
+      question: 'Переведите: Я на работе',
+      answer: ['Já jsem v práci', 'Jsem v práci']
+    },
+    {
+      question: 'Задайте вопрос: Ты русский?',
+      answer: ['Ty jsi Rus?', 'Jsi Rus?']
+    },
+    {
+      question: 'Переведите: Я не на работе',
+      answer: ['Já nejsem v práci', 'Nejsem v práci']
+    },
+    {
+      question: 'Переведите: Он врач',
+      answer: ['On je doktor', 'Je doktor']
+    },
+    {
+      question: 'Задайте вопрос: Он врач?',
+      answer: ['On je doktor?', 'Je doktor?']
+    },
+    {
+      question: 'Переведите: Он не врач',
+      answer: ['On není doktor', 'Není doktor']
+    },
+    {
+      question: 'Переведите: Они мои родители',
+      answer: ['Oni jsou moji rodiče', 'Jsou moji rodiče']
+    },
+    {
+      question: 'Задайте вопрос: Они твои родители?',
+      answer: 'Oni jsou tvoji rodiče?'
+    },
+    {
+      question: 'Переведите: Они не мои родители',
+      answer: 'Oni nejsou moji rodiče'
     }
-    // {
-    //   question: 'Ознакомтесь с теоретическим материалом и напишите "готов"',
-    //   answer: 'готов',
-    //   onError: 'Напишите "готов", если вы ознакомились с теоретическим материалом'
-    // }
   ];
 }
