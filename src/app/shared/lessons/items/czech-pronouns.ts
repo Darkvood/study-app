@@ -1,6 +1,6 @@
 import {BaseLesson, ILesson, ILessonQuestion} from '../base/base-lesson';
 
-export class СzechPronouns extends BaseLesson implements ILesson {
+export class CzechPronouns extends BaseLesson implements ILesson {
   uid = 'czech-pronouns';
   title = 'Чешский язык. Местоимения';
   img = 'flag_czech';

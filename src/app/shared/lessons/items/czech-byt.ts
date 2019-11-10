@@ -1,6 +1,6 @@
 import {BaseLesson, ILesson, ILessonQuestion} from '../base/base-lesson';
 
-export class СzechByt extends BaseLesson implements ILesson {
+export class CzechByt extends BaseLesson implements ILesson {
   uid = 'czech-byt';
   title = 'Чешский язык. Глагол «Быть» (být)';
   img = 'flag_czech';
