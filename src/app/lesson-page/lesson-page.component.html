@@ -1,5 +1,8 @@
 <div class="lesson-page">
   <div class="container">
-    <app-lesson *ngIf="lesson" [lesson]="lesson"></app-lesson>
+    <app-lesson *ngIf="lesson; else loadingBlock" [lesson]="lesson"></app-lesson>
+    <ng-template #loadingBlock>
+      <div class="lesson-page__loading">Подождите, пожалуйста...</div>
+    </ng-template>
   </div>
 </div>

@@ -19,7 +19,7 @@ export class LessonPageComponent implements OnInit {
       const lesson = this.lessonsService.getByUid(params.uid);
 
       if (lesson) {
-        import(`src/app/shared/lessons/items/${params.uid}.resource`).then(({default: {description = '', questions = []}}) => {
+        import(`src/app/shared/lessons/items/${params.uid}.resource`).then(({description = '', questions = []}) => {
           lesson.description = description;
           lesson.questions = questions;
 

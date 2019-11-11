@@ -1,5 +1,4 @@
-export default {
-  description: `
+export const description = `
     <p>
       Предложение в чешском языке не может быть без глагола. Глагол — это изменяемая часть речи,
       а значит, спрягается. Но для начала нужно выучить новые слова.
@@ -82,108 +81,108 @@ export default {
       практически не употребляются, лицо определяется глаголом, поэтому вместо <i>Já <b>nejsem</b> doma</i> скажем
       <i><b>Nejsem</b> doma</i>.
     </p>
-  `,
-  questions: [
-    {
-      question: 'Ознакомтесь с теоретическим материалом и напишите "готов"',
-      answer: 'готов',
-      onError: 'Напишите "готов", если вы ознакомились с теоретическим материалом'
-    },
-    {
-      question: 'Переведите: Я дома',
-      answer: ['Já jsem doma', 'Jsem doma']
-    },
-    {
-      question: 'Задайте вопрос: Ты дома?',
-      answer: ['Ty jsi doma?', 'Jsi doma?']
-    },
-    {
-      question: 'Переведите: Я не дома',
-      answer: ['Já nejsem doma', 'Nejsem doma']
-    },
-    {
-      question: 'Переведите: Я русский',
-      answer: ['Já jsem Rus', 'Jsem Rus']
-    },
-    {
-      question: 'Задайте вопрос: Ты русский?',
-      answer: ['Ty jsi Rus?', 'Jsi Rus?']
-    },
-    {
-      question: 'Переведите: Я не русский',
-      answer: ['Já nejsem Rus', 'Nejsem Rus']
-    },
-    {
-      question: 'Переведите: Дети на улице',
-      answer: 'Děti jsou venku'
-    },
-    {
-      question: 'Задайте вопрос: Дети на улице?',
-      answer: 'Děti jsou venku?'
-    },
-    {
-      question: 'Переведите: Дети не на улице',
-      answer: 'Děti nejsou venku'
-    },
-    {
-      question: 'Переведите: Мы в школе',
-      answer: 'My jsme ve škole'
-    },
-    {
-      question: 'Задайте вопрос: Они в школе?',
-      answer: 'Oni jsou ve škole?'
-    },
-    {
-      question: 'Переведите: Мы не в школе',
-      answer: 'My nejsme ve škole'
-    },
-    {
-      question: 'Переведите: Он студент',
-      answer: 'On je student'
-    },
-    {
-      question: 'Задайте вопрос: Вы студент?',
-      answer: 'Vy jste student?'
-    },
-    {
-      question: 'Переведите: Он не студент',
-      answer: 'On není student'
-    },
-    {
-      question: 'Переведите: Я на работе',
-      answer: ['Já jsem v práci', 'Jsem v práci']
-    },
-    {
-      question: 'Задайте вопрос: Ты русский?',
-      answer: ['Ty jsi Rus?', 'Jsi Rus?']
-    },
-    {
-      question: 'Переведите: Я не на работе',
-      answer: ['Já nejsem v práci', 'Nejsem v práci']
-    },
-    {
-      question: 'Переведите: Он врач',
-      answer: ['On je doktor', 'Je doktor']
-    },
-    {
-      question: 'Задайте вопрос: Он врач?',
-      answer: ['On je doktor?', 'Je doktor?']
-    },
-    {
-      question: 'Переведите: Он не врач',
-      answer: ['On není doktor', 'Není doktor']
-    },
-    {
-      question: 'Переведите: Они мои родители',
-      answer: ['Oni jsou moji rodiče', 'Jsou moji rodiče']
-    },
-    {
-      question: 'Задайте вопрос: Они твои родители?',
-      answer: 'Oni jsou tvoji rodiče?'
-    },
-    {
-      question: 'Переведите: Они не мои родители',
-      answer: 'Oni nejsou moji rodiče'
-    }
-  ]
-};
+  `;
+
+export const questions = [
+  {
+    question: 'Ознакомтесь с теоретическим материалом и напишите "готов"',
+    answer: 'готов',
+    onError: 'Напишите "готов", если вы ознакомились с теоретическим материалом'
+  },
+  {
+    question: 'Переведите: Я дома',
+    answer: ['Já jsem doma', 'Jsem doma']
+  },
+  {
+    question: 'Задайте вопрос: Ты дома?',
+    answer: ['Ty jsi doma?', 'Jsi doma?']
+  },
+  {
+    question: 'Переведите: Я не дома',
+    answer: ['Já nejsem doma', 'Nejsem doma']
+  },
+  {
+    question: 'Переведите: Я русский',
+    answer: ['Já jsem Rus', 'Jsem Rus']
+  },
+  {
+    question: 'Задайте вопрос: Ты русский?',
+    answer: ['Ty jsi Rus?', 'Jsi Rus?']
+  },
+  {
+    question: 'Переведите: Я не русский',
+    answer: ['Já nejsem Rus', 'Nejsem Rus']
+  },
+  {
+    question: 'Переведите: Дети на улице',
+    answer: 'Děti jsou venku'
+  },
+  {
+    question: 'Задайте вопрос: Дети на улице?',
+    answer: 'Děti jsou venku?'
+  },
+  {
+    question: 'Переведите: Дети не на улице',
+    answer: 'Děti nejsou venku'
+  },
+  {
+    question: 'Переведите: Мы в школе',
+    answer: 'My jsme ve škole'
+  },
+  {
+    question: 'Задайте вопрос: Они в школе?',
+    answer: 'Oni jsou ve škole?'
+  },
+  {
+    question: 'Переведите: Мы не в школе',
+    answer: 'My nejsme ve škole'
+  },
+  {
+    question: 'Переведите: Он студент',
+    answer: 'On je student'
+  },
+  {
+    question: 'Задайте вопрос: Вы студент?',
+    answer: 'Vy jste student?'
+  },
+  {
+    question: 'Переведите: Он не студент',
+    answer: 'On není student'
+  },
+  {
+    question: 'Переведите: Я на работе',
+    answer: ['Já jsem v práci', 'Jsem v práci']
+  },
+  {
+    question: 'Задайте вопрос: Ты русский?',
+    answer: ['Ty jsi Rus?', 'Jsi Rus?']
+  },
+  {
+    question: 'Переведите: Я не на работе',
+    answer: ['Já nejsem v práci', 'Nejsem v práci']
+  },
+  {
+    question: 'Переведите: Он врач',
+    answer: ['On je doktor', 'Je doktor']
+  },
+  {
+    question: 'Задайте вопрос: Он врач?',
+    answer: ['On je doktor?', 'Je doktor?']
+  },
+  {
+    question: 'Переведите: Он не врач',
+    answer: ['On není doktor', 'Není doktor']
+  },
+  {
+    question: 'Переведите: Они мои родители',
+    answer: ['Oni jsou moji rodiče', 'Jsou moji rodiče']
+  },
+  {
+    question: 'Задайте вопрос: Они твои родители?',
+    answer: 'Oni jsou tvoji rodiče?'
+  },
+  {
+    question: 'Переведите: Они не мои родители',
+    answer: 'Oni nejsou moji rodiče'
+  }
+];
