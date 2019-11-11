@@ -19,7 +19,12 @@ export class LessonPageComponent implements OnInit {
       const lesson = this.lessonsService.getByUid(params.uid);
 
       if (lesson) {
-        this.lesson = lesson;
+        import(`src/app/shared/lessons/items/${params.uid}.resource`).then(({default: {description = '', questions = []}}) => {
+          lesson.description = description;
+          lesson.questions = questions;
+
+          this.lesson = lesson;
+        });
       } else {
         this.router.navigate(['not-found']);
       }

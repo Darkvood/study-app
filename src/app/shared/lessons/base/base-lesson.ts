@@ -34,9 +34,9 @@ export abstract class BaseLesson implements ILesson {
   abstract uid: string;
   abstract title: string;
   abstract shortDescription: string;
-  abstract description: string;
-  abstract questions: ILessonQuestion[];
 
+  description = '';
+  questions: ILessonQuestion[] = [];
   img = 'lesson-bg_default';
   categories = [];
   done: boolean;
@@ -60,6 +60,7 @@ export abstract class BaseLesson implements ILesson {
 
   * run(messenger: ISendMessage): ProcessLesson {
     const task = new LessonRunner(this, messenger);
+
 
     yield* task.run();
   }
