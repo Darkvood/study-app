@@ -71,9 +71,9 @@ export const description = `
       <li>On je mil<b>ý</b>. — Он милый.</li>
       <li>Ona je mil<b>á</b>. — Она милая.</li>
       <li>Oni jsou mil<b>í</b>. — Они милые.</li>
-      <li>krásn<b>á</b> květina<i>(она)</i> — красивый цветок. Слово "цветок" в чешском языке имеет женский род.</li>
-      <li>vysok<b>ý</b> chlapec<i>(он)</i> — высокий мальчик.</li>
-      <li>hlubok<b>é</b><i>(оно)</i> jezero — голубое озеро.</li>
+      <li>krásn<b>á</b> květina<i>(эта)</i> — красивый цветок. Слово "цветок" в чешском языке имеет женский род.</li>
+      <li>vysok<b>ý</b> chlapec<i>(этот)</i> — высокий мальчик.</li>
+      <li>hlubok<b>é</b> jezero<i>(это)</i> — голубое озеро.</li>
     </ul>
     <h3>Употребление местоимений</h3>
     <p>
